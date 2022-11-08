@@ -11,7 +11,21 @@ const useWordle = (solution) => {
 
   const addNewGuess = () => {};
 
-  const handleKeyup = () => {};
+  const handleKeyup = ({ key }) => {
+    if (key === 'Backspace') {
+      setCurrentGuess((prev) => {
+        return prev.slice(0, -1);
+      });
+
+      return;
+    }
+
+    if (/^[A-Za-z]$/.test(key) && currentGuess.length < 5) {
+      setCurrentGuess((prev) => {
+        return prev + key;
+      });
+    }
+  };
 
   return {
     turn,
