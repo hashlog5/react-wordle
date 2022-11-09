@@ -22,6 +22,7 @@ h1 {
 
   text-align: center;
 }
+
 .row > div {
   width: 60px;
   height: 60px;
@@ -30,9 +31,23 @@ h1 {
   display: block;
   text-align: center;
   line-height: 60px;
-  
+
   border: 1px solid #bbb;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 2.5em;
+}
+
+.row > div.green {
+  background: #5ac85a;
+  border-color: #5ac85a;
+}
+
+.row > div.grey {
+  background: #a1a1a1;
+  border-color: #a1a1a1;
+}
+.row > div.yellow {
+  background: #e2cc68;
+  border-color: #e2cc68;
 }

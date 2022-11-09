@@ -35,10 +35,9 @@ const useWordle = (solution) => {
       setIsCorrect(true);
     }
 
-    setGuesses((previousGuesses) => {
-      let newGuesses = [...previousGuesses];
+    setGuesses((prevGuesses) => {
+      let newGuesses = [...prevGuesses];
       newGuesses[turn] = formattedGuess;
-
       return newGuesses;
     });
 
@@ -47,7 +46,7 @@ const useWordle = (solution) => {
     });
 
     setTurn((prevTurn) => {
-      return prevTurn++;
+      return prevTurn + 1;
     });
 
     setCurrentGuess('');
